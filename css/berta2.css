@@ -1,0 +1,368 @@
+.abajo {
+  position: fixed;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 5px 5px 5px;
+  background-color: #444;
+}
+.abajo::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.abajo .logo {
+  font-size: 28px;
+  color: whitesmoke;
+  line-height: 0;
+  margin-bottom: 8px;
+  margin-right: 4px;
+}
+@media screen and (min-width: 1024px) {
+  .abajo .logo {
+    float: left;
+    margin-bottom: 0;
+  }
+}
+.abajo ul {
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+.abajo ul::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+@media screen and (min-width: 1024px) {
+  .abajo ul {
+    float: left;
+    line-height: 1.8;
+    margin-bottom: 0;
+    margin-left: 16px;
+  }
+  .abajo ul::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+.abajo ul li {
+  list-style: none;
+  padding-right: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .abajo ul li {
+    display: inline;
+    text-align: left;
+  }
+}
+.abajo ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.abajo ul li a:focus, .abajo ul li a:hover {
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  .abajo .secondary-links {
+    float: right;
+  }
+}
+.abajo .secondary-links li a {
+  font-size: 12px;
+  font-weight: 100 !important;
+}
+.abajo .secondary-links .social {
+  margin: 1em 0 0 0;
+}
+@media screen and (min-width: 1024px) {
+  .abajo .secondary-links .social {
+    float: right;
+    margin-top: 0;
+  }
+}
+.abajo .secondary-links .social li {
+  float: left;
+  font-size: 1em;
+  line-height: 0;
+  margin: 0;
+  padding-right: 0.7em;
+}
+.abajo .secondary-links .social li:last-child {
+  padding-right: 0;
+}
+.abajo .secondary-links .social li > a {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  color: #444;
+  text-align: center;
+  line-height: 30px;
+}
+.abajo .secondary-links .social li > a:hover {
+  background-color: white;
+}
+
+
+
+#btn-oxblood-1 {
+	color: #fff;
+	background-color: ##B87683;
+	border-color: ##B87683;
+}
+
+/* TEMA LECTORES oxblood  oxb*/
+
+.oxb { background-color: #76323F; color: #fff; border-color: #76323F;}	/* Main Primary color */
+.oxbth { background-color: #B87683; color: #000; border-color: #B87683; }
+.oxblabel { background-color: #974F5D; color: #fff; border-color: #974F5D; }
+.oxbfondo { background-color: #F7EBED; }
+.oxbbut2 { background-color: #440A15; color: #fff; }
+
+
+/* TEMA EJEMPLARES lileil  lil*/
+
+.lil { background-color: #3B5270; color: #fff; border-color: #3B5270;}	/* Main Primary color */
+.lilth { background-color: #78889C; color: #000; border-color: #78889C; }
+.lillabel { background-color: #566A84; color: #fff; border-color: #566A84; }
+.lilfondo { background-color: #E3DFE6; }
+.lilbut2 { background-color: #162C49; color: #fff; }
+
+/* TEMA PRESTAMOS ocris  ocr*/
+
+.ocr { background-color: #2f4d1a; color: #fff; border-color: #0D2701;}	/* Main Primary color */
+.ocrth { background-color: #7FA86B; color: #000; border-color: #7FA86B; }
+.ocrlabel { background-color: #436E2E; color: #fff; border-color: #436E2E; }
+.ocrfondo { background-color: #E8F1E5; }
+.ocrbut2 { background-color: #162a11; color: #fff; }
+
+/* TEMA VINO vin*/
+
+.vin { background-color: #034127; color: #fff; border-color: #034127;}	/* Main Primary color */
+.vinth { background-color: #631215; color: #fff; border-color: #631215; }
+.vinlabel { background-color: #c0ac9a; color: #000; border-color: #c0ac9a; }
+.vinfondo { background-color: #facaab; }
+.vinbut2 { background-color: #1a1a1a; color: #fff; }
+
+/* CAMPOS fld*/
+
+.fld-FECHA { background-color: #B8C3DB; color: #000; border-color: #B8C3DB; }
+.fld-LIBRO { background-color: #D3F0C5; color: #000; border-color: #D3F0C5; }
+.fld-CODIGOLECTOR { background-color: #FFDBD1; color: #000; border-color: #FFDBD1; }
+.fld-ALIAS { background-color: #F2D6E5; color: #000; border-color: #F2D6E5; }
+.fld-PRESTADO { background-color: #C13853; color: #000; border-color: #C13853; }
+.fld-DEVUELTO { background-color: #899A51; color: #000; border-color: #899A51; }
+.fld-DISPONIBLE { background-color: #899A51; color: #000; border-color: #899A51; }
+.fld-CURSO { background-color: #D9A6B0; color: #000; border-color: #D9A6B0; }
+.fld-WARNING { background-color: #FBD51E; color: #000; border-color: #FBD51E; }
+.fld-EDITORIAL { background-color: #E3DFE6; color: #000; border-color: #E3DFE6; }
+.fld-SERIE { background-color: #A27155; color: #000; border-color: #A27155; }
+
+.oxcolacao-0 { color: #7F5036 }	/* Main Secondary color (2) */
+.oxcolacao-1 { color: #C6987E }
+.oxcolacao-2 { color: #A27155 }
+.oxcolacao-3 { color: #69391F }
+.oxcolacao-4 { color: #49210A }
+
+.fld-DESPEDIDA { 
+	background-color: #FFF71F;
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-radius: .6rem;
+	}
+
+/* Modifico bootstrap a mi gusto */
+
+div.dataTables_wrapper div.dataTables_info, div.dataTables_wrapper div.dataTables_paginate
+	{
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-weight: 500
+}
+
+h7 {
+	display: inline-block;
+	padding: .25em .4em;
+	font-weight: 600;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .25rem;
+	background-color: #F2D6E5;
+	border-color: #F2D6E5;
+	color: #000;
+		box-shadow: 0 3px 3px 0 rgba(0,0,0,0.18),0 3px 3px 0 rgba(0,0,0,0.15);
+	transition: color .15s ease-in-out, background-color .15s ease-in-out,
+		border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+h8 {
+	display: inline-block;
+	padding: .25em .4em;
+	font-weight: 600;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .25rem;
+	background-color: #D9A6B0;
+	color: #000;
+		box-shadow: 0 3px 3px 0 rgba(0,0,0,0.18),0 3px 3px 0 rgba(0,0,0,0.15);
+	transition: color .15s ease-in-out, background-color .15s ease-in-out,
+		border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+h9 {
+	display: inline-block;
+	padding: .25em .4em;
+	font-weight: 600;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .25rem;
+	background-color: #D9A6B0;
+	color: #000;
+		box-shadow: 0 3px 3px 0 rgba(0,0,0,0.18),0 3px 3px 0 rgba(0,0,0,0.15);
+	transition: color .15s ease-in-out, background-color .15s ease-in-out,
+		border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.sombra {
+	margin-bottom: 20px; box-shadow: 3px 4px 15px 1px rgba(0, 0, 0, 0.53);
+}
+
+
+
+.boton {
+	display: inline-block;
+	font-weight: 400;
+	color: #212529;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: .25rem;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out,
+		border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.boton:hover {
+	color: #212529;
+	text-decoration: none
+}
+
+.boton.focus, .boton:focus {
+	outline: 0;
+	box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+}
+
+.boton.disabled, .boton:disabled {
+	opacity: .65
+}
+
+a.boton.disabled, fieldset:disabled a.boton {
+	pointer-events: none
+}
+
+.boton-soft {
+	color: #000;
+	background-color: #B0A3BB;
+	border-color: #B0A3BB;
+}
+
+.boton-fecha {
+	color: #000000;
+	background-color: #C2A67B;
+	border-color: #C2A67B;
+}
+
+.marca {
+	display: inline-block;
+	padding: .25em .4em;
+	font-size: 85%;
+	font-weight: 600;
+	line-height: 1;
+	text-align: center;
+	white-space: normal;
+	vertical-align: baseline;
+	border-radius: .25rem;
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.18),0 3px 3px 0 rgba(0,0,0,0.15);
+	transition: color .15s ease-in-out, background-color .15s ease-in-out,
+		border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+
+a.marca:focus, a.marca:hover {
+	text-decoration: none
+}
+
+.marca:empty {
+	display: none
+}
+
+
+.boton .marca {
+	position: relative;
+	top: -1px
+}
+
+.marca-capsula{
+	padding-right: .6em;
+	padding-left: .6em;
+	border-radius: 10rem
+}
+
+.bertateka{
+	font-family: 'Fontdiner Swanky';
+	font-weight: 600;
+	font-size: 36px;
+	background-color: #C6987E;
+	color: #ffeeca;
+	border-color: #C6987E;
+}
+
+table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before,
+	table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before,
+	table.dataTable thead .sorting_desc_disabled:before {
+	right: 1em;
+	font-family: "Font Awesome\ 5 Free", sans-serif;
+	font-size: 1rem;
+	font-weight: 900;
+	top: -12px;
+	content: ""
+}
+
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after,
+	table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after,
+	table.dataTable thead .sorting_desc_disabled:after {
+	right: 16px;
+	font-family: "Font Awesome\ 5 Free", sans-serif;
+	font-size: 1rem;
+	font-weight: 900;
+	top: -12px;
+	content: ""
+}
+.card-body {
+	 min-height: 25vh;
+}
+
+.invisible{
+	display:none;
+}
