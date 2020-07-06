@@ -36,7 +36,7 @@ if ( isset($_GET['action'])) {
             break;
         case 'add' :
             $Lectores->crear($_POST) ;
-            $accion="añadido";
+            $accion="a�adido";
             break;
     }
     $mimensaje="<p>Se ha $accion a </p><p class='".$baseclass."'>". $_POST['APELLIDOS'] . ", " . $_POST['NOMBRE'] . " (" . $_POST['CODIGOLECTOR']. ")</p>";
@@ -85,10 +85,10 @@ for ($n = 0; $n < count($datoslectores); $n++) {
 $body1 .= "\n</tbody>\n</table><!-- FIN tabla -->\n\n";
 
 
-//$Ges_Lector->setCard($body1);
-//echo $Ges_Lector->getCard();
+$Ges_Lector->setCard($body1);
+echo $Ges_Lector->getCard();
 
-echo $body1;
+
 
 
 echo "</div><!-- FIN COL IZQUIERDA -->\n\n<!-- EMPIEZA COL DERECHA -->\n<div class='col-6'>\n";
@@ -116,7 +116,6 @@ $footer2= "<!-- tabla -->
 for ($n = 0; $n < count($datoslecturas); $n++) {
     $prestamo_id = $datoslecturas[$n]['NUMPRES'];
     $ejemplar_id = $datoslecturas[$n]['CODEJ'];
-    $libroutf=$datoslecturas[$n]['LIBRO'];
     
     $footer2 .= "<td >".$datoslecturas[$n]['NUMPRES']."</td>";
     $footer2 .= "<td style='text-align:center'><div  class='marca fld-FECHA'>".$datoslecturas[$n]['FECHA']."</div></td>";
@@ -126,7 +125,7 @@ for ($n = 0; $n < count($datoslecturas); $n++) {
         $footer2 .= "<td></td>";
     }
     else {
-        $footer2 .= "<td><a href='prestamos.php?action=devolver&idprestamo=$prestamo_id&idejemplar=$ejemplar_id' class='marca fld-WARNING m-0 p-1' onclick='despedidalibro(".chr(34).$libroutf.chr(34).")'>Devolver</a></td>";
+        $footer2 .= "<td><a href='prestamos.php?action=devolver&idprestamo=$prestamo_id&idejemplar=$ejemplar_id' class='marca fld-WARNING m-0 p-1' onclick='despedida()'>Devolver</a></td>";
     }
     
     $footer2 .= '</tr>';
