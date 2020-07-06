@@ -1,6 +1,6 @@
 <?php
 //Variables de configuracion texto a utf8
-$st_gestionlectores='GESTIÃ“N DE LECTORES';
+$st_gestionlectores='GESTIÓN DE LECTORES';
 
 // ************ ARRAYS GLOBALES OPCIONES CAMPOS  *************
 $global_cursos = ['ADULTOS','ESO 1','ESO 2', 'INF 3','INF 4','INF 5','OTROS','PRI 1','PRI 2','PRI 3','PRI 4','PRI 5','PRI 6'];
@@ -10,8 +10,8 @@ $APELLIDOS = new CampoForm('fila','APELLIDOS', 'text', 'APELLIDOS', Array(),'Ape
 $NOMBRE = new CampoForm('fila','NOMBRE', 'text', 'NOMBRE', Array(),'NOMBRE...', true);
 $CURSO = new CampoForm( 'col', 'CURSO','select', 'CURSO', $global_cursos);
 $FECHAALTA = new CampoForm( 'col', 'FECHAALTA','text', 'ALTA', Array(), '','' , true, true);
-$CODIGOLECTOR = new CampoForm( 'col','CODIGOLECTOR', 'text', 'CÃ“DIGO', Array(),'','',true,true);
-$NACIMIENTO = new CampoForm( 'col','NACIMIENTO', 'text', 'NACIMIENTO', Array(), 'AÃ±o de nacimiento...');
+$CODIGOLECTOR = new CampoForm( 'col','CODIGOLECTOR', 'text', 'CÓDIGO', Array(),'','',true,true);
+$NACIMIENTO = new CampoForm( 'col','NACIMIENTO', 'text', 'NACIMIENTO', Array(), 'Año de nacimiento...');
 $Fila1= new FilaForm($APELLIDOS);
 $Fila2= new FilaForm($NOMBRE);
 $Fila3= new FilaForm($CODIGOLECTOR);

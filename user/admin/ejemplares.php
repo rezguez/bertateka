@@ -34,7 +34,7 @@ if ( isset($_GET['action'])) {
             break;
         case 'add' :
             $Ejemplares->crear($_POST) ;
-            $accion="añadido";
+            $accion="a�adido";
             break;
     }
     $mimensaje="<p>Se ha $accion a </p><p class='".$baseclass."'>". $_POST['TITULO'] . " (" . $_POST['CODEJEM']. ")</p>";
@@ -128,7 +128,7 @@ $body2 .= "<!-- tabla -->
 for ($n = 0; $n < count($datoslecturas); $n++) {
     $prestamo_id = $datoslecturas[$n]['NUMPRES'];
     $ejemplar_id = $datoslecturas[$n]['CODEJ'];
-    $libroutf=$datoslecturas[$n]['LIBRO'];
+    $libroutf=utf8_encode($datoslecturas[$n]['LIBRO']);
     
     $body2 .= "<td >".$datoslecturas[$n]['NUMPRES']."</td>";
     $body2 .= "<td style='text-align:center'><div  class='marca fld-FECHA'>".$datoslecturas[$n]['FECHA']."</div></td>";

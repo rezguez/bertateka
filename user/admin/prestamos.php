@@ -44,7 +44,7 @@ if ( isset($_GET['action'])) {
             break;
         case 'add' :
             $Prestamos->crear($_POST) ;
-            $mimensaje="<p>Se ha añadido</p><p class='".$baseclass."'>". $_POST['TITULO'] . " (" . $_POST['CODEJ']. ")</p>";
+            $mimensaje="<p>Se ha $accion</p><p class='".$baseclass."'>". $_POST['TITULO'] . " (" . $_POST['CODEJ']. ")</p>";
             break;
     }
     
@@ -100,15 +100,15 @@ $footer2= "<!-- tabla -->
 <table id='example'	class='table-striped display compact' style='width:100%'>
 <thead>
 <tr>
-<th class='th  ".$baseclass."th '>NUMPRES</th>
-<th class='th  ".$baseclass."th '>FECHA</th>
-<th class='th  ".$baseclass."th '>ENTREGA</th>
-<th class='th  ".$baseclass."th '>LECTOR</th>
-<th class='th  ".$baseclass."th '>LIBRO</th>
+<th class='th m-0 ".$baseclass."th '>NUMPRES</th>
+<th class='th m-0 ".$baseclass."th '>FECHA</th>
+<th class='th m-0 ".$baseclass."th '>ENTREGA</th>
+<th class='th m-0 col-3 ".$baseclass."th '>LECTOR</th>
+<th class='th m-0 ".$baseclass."th '>LIBRO</th>
 
-<th class='th  ".$baseclass."th '>CURSO</th>
-<th class='th  ".$baseclass."th '>CODLEC</th>
-<th class='th  ".$baseclass."th '>ESTADO</th>
+<th class='th m-0 ".$baseclass."th '>CURSO</th>
+<th class='th m-0 ".$baseclass."th '>CODLEC</th>
+<th class='th m-0 ".$baseclass."th '>ESTADO</th>
 </tr>
 </thead>
 <tbody>";
@@ -117,7 +117,6 @@ $footer2= "<!-- tabla -->
 for ($n = 0; $n < count($datoslecturas); $n++) {
     $prestamo_id = $datoslecturas[$n]['NUMPRES'];
     $ejemplar_id = $datoslecturas[$n]['CODEJ'];
-    $libroutf=$datoslecturas[$n]['LIBRO'];
     $entrega="<div  class='marca fld-FECHA'>".$datoslecturas[$n]['ENTREGA']."</div>";
     if ($datoslecturas[$n]['ENTREGA']=='0000-00-00') $entrega='';
     
@@ -134,7 +133,7 @@ for ($n = 0; $n < count($datoslecturas); $n++) {
         $footer2 .= "<td></td>";
     }
     else {
-        $footer2 .= "<td><a href='prestamos.php?action=devolver&idprestamo=$prestamo_id&idejemplar=$ejemplar_id' class='marca fld-WARNING m-0 p-1' onclick='despedidalibro(".chr(34).$libroutf.chr(34).")'>Devolver</a></td>";
+        $footer2 .= "<td><a href='prestamos.php?action=devolver&idprestamo=$prestamo_id&idejemplar=$ejemplar_id' class='marca fld-WARNING m-0 p-1' onclick='despedida()' >Devolver</a></td>";
     }
     
     $footer2 .= '</tr>';
@@ -143,9 +142,9 @@ for ($n = 0; $n < count($datoslecturas); $n++) {
 
 
 $footer2 .="\n</tbody>\n</table>\n<!-- tabla -->\n";
-//$Ges_Prestamo->setCard($footer2);
-//echo $Ges_Prestamo->getCard();
-echo $footer2;
+$Ges_Prestamo->setCard($footer2);
+echo $Ges_Prestamo->getCard();
+
 
 echo "</div><!-- FIN mainbox -->\n</div><!-- FIN container -->\n</main><!-- FIN MAIN -->\n";
 ?>
